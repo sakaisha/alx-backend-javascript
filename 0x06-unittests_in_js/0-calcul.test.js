@@ -1,29 +1,29 @@
-const calculateNumber = require('./0-calcul');
 const assert = require('assert');
+const calculateNumber = require('./0-calcul');
 
 describe('calculateNumber', function () {
-
-  it('should return integer as sum with float and float', () => {
-    assert.deepStrictEqual(calculateNumber(1.7, 2.3), 4);
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.3, 5), 6);
   });
-
-  it('should return integer as sum with integer and float', () => {
-    assert.deepStrictEqual(calculateNumber(1, 2.3), 3);
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.6, 5), 7);
   });
-
-  it('should return integer as sum with integer and integer', () => {
-    assert.deepStrictEqual(calculateNumber(1, 2), 3);
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.01, 5), 6);
   });
-
-  it('should return correct sum with a float rounded up and other float rounded down', () => {
-    assert.deepStrictEqual(calculateNumber(0.2, 2.8), 3);
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1, 5.1), 6);
   });
-
-  it('should return correct sum with numbers to be rounded down', () => {
-    assert.deepStrictEqual(calculateNumber(0.1, 0.2), 0);
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.3, 5.7), 7);
   });
-
-  it('should return correct sum with numbers to be rounded up', () => {
-    assert.deepStrictEqual(calculateNumber(0.8, 1.7), 3);
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.6, 5.7), 8);
+  });
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.3, 5.1), 6);
+  });
+  it('should return correct output', () => {
+    assert.equal(calculateNumber(1.3, 0.5), 2);
   });
 });
